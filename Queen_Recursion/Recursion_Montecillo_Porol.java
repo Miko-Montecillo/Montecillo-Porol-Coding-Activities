@@ -50,20 +50,20 @@ public class Recursion_Montecillo_Porol {
     private static void showResult(char[][] chessBoard, int N) {
         // Print the column numbers
         System.out.print("   ");
-        for (int i = 1; i <= N; i++) {
+        for (int i = 0; i < N; i++) {
             System.out.printf("%-3d", i);
         }
         System.out.println();
-    
+        
         for (int i = 0; i < N; i++) {
             // Print the row number
-            System.out.printf("%-3d", i + 1);
+            System.out.printf("%-3d", i);
             for (int j = 0; j < N; j++) {
                 System.out.printf("%-3c", chessBoard[i][j]); // Print each cell of the chess board
             }
             System.out.println();
         }
-    }    
+    }     
 
     // Entry point of the program
     public static void startQueens(int N) {
