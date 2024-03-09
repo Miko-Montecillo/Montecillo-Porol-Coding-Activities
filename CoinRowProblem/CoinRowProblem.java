@@ -1,3 +1,4 @@
+// Montecillo & Porol CSCC 13 B
 import java.util.Scanner;
 
 public class CoinRowProblem {
