@@ -1,4 +1,4 @@
-package Quick_Sort;
+package QuickSort;
 
 // CSCC 13 || CCB || Quick Sort Implementation
 // Montecillo, Porol

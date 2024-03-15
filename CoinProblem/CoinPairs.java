@@ -1,4 +1,4 @@
-package Coin_Problem;
+package CoinProblem;
 
 // Montecillo & Porol CSCC 13 B
 import java.util.Scanner;
