@@ -1,4 +1,4 @@
-package JAVA;
+package Midterms;
 
 import java.util.Scanner;
 
