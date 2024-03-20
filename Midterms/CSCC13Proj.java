@@ -70,4 +70,4 @@ public class CSCC13Proj {
             this.damageDealt = damageDealt;
         }
     }
-}
+}   

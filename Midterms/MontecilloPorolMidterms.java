@@ -2,7 +2,7 @@ package Midterms;
 
 import java.util.Scanner;
 
-public class Revised {
+public class MontecilloPorolMidterms {
 
     public static void main(String[] args) {
         // Create a scanner object to read input from the user
@@ -12,28 +12,34 @@ public class Revised {
         System.out.println("Enter the number of rounds:");
         int testCases = scanner.nextInt();
 
-        
         // Iterate over each test case
         for (int testCase = 0; testCase < testCases; testCase++) {
             // Prompt the user to enter details for each combatant in every test case
-            System.out.println("\nWelcome to round " + (testCase + 1) + "!! Give the name, health, and power of each fighter below:");
-            
-            // Input details for the first combatant (pirate)
-            Combatant pirate = new Combatant(scanner.next(), scanner.nextInt(), scanner.nextInt());
-            // Input details for the second combatant (ninja)
-            Combatant ninja = new Combatant(scanner.next(), scanner.nextInt(), scanner.nextInt());
+            System.out.println("\nWelcome to round " + (testCase + 1)
+                    + "!! Give the name, health, and power of each fighter below:");
 
-            System.out.println("\nFIGHT!!!\n");
+            // Input details for the first combatant (pirate)
+            System.out.print("Pirate: ");
+            Combatant pirate = new Combatant(scanner.next(), scanner.nextInt(), scanner.nextInt(), "pirates");
+            // Input details for the second combatant (ninja)
+            System.out.print("Ninja: ");
+            Combatant ninja = new Combatant(scanner.next(), scanner.nextInt(), scanner.nextInt(), "ninjas");
+
+            System.out.println("\nGET READY!!\n\nFIGHT!!!\n");
 
             // Simulate the combat between the pirate and the ninja and get the result
             CombatResult result = simulateCombat(pirate, ninja);
 
             // Output the result of the combat
-            System.out.println(result.getWinner().getName() + " takes round " + (testCase + 1) + " by " + result
-                    .getWinner().getHealth() + " health!\n");
+            System.out.println(result.getWinner().getName() + " of the " + result.getWinner().getType()
+                    + " takes round " + (testCase + 1) + " by " + result
+                            .getWinner().getHealth()
+                    + " health!!\n");
 
-            System.out.println("End of round " + (testCase + 1) +"!");
+            System.out.println("End of round " + (testCase + 1) + "!");
         }
+        
+        
 
         // Close the scanner to prevent resource leak
         scanner.close();
@@ -60,12 +66,14 @@ public class Revised {
         private String name;
         private int health;
         private int power;
+        private String type;
 
         // Constructor to initialize a combatant with name, health, and power
-        public Combatant(String name, int health, int power) {
+        public Combatant(String name, int health, int power, String type) {
             this.name = name;
             this.health = health;
             this.power = power;
+            this.type = type;
         }
 
         // Getter method to retrieve the name of the combatant
@@ -81,6 +89,10 @@ public class Revised {
         // Getter method to retrieve the power of the combatant
         public int getPower() {
             return power;
+        }
+
+        public String getType() {
+            return type;
         }
 
         // Method to check if the combatant has been defeated (health <= 0)
