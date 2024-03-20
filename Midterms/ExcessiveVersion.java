@@ -46,6 +46,7 @@ public class ExcessiveVersion {
                 BattleSummary.showSummary(result);
             }
 
+            // Display end of round message
             System.out.println("\nEnd of round " + (testCase + 1) + "!");
         }
 
@@ -125,10 +126,6 @@ public class ExcessiveVersion {
         public void takeDamage(int damage) {
             // Subtract the damage from the combatant's health
             health -= damage;
-            // Ensure that health does not go below zero
-            if (health < 0) {
-                health = 0;
-            }
         }
     }
 
@@ -176,8 +173,8 @@ public class ExcessiveVersion {
             List<Integer> pirateHealth = result.getPirateHealth();
             List<Integer> ninjaHealth = result.getNinjaHealth();
 
-            for (int i = 0; i < pirateHealth.size(); i++) {
-                int exchangeNumber = i + 1;
+            for (int i = 1; i < pirateHealth.size(); i++) {
+                int exchangeNumber = i;
                 int pirateHealthNow = pirateHealth.get(i);
                 int ninjaHealthNow = ninjaHealth.get(i);
                 System.out.printf("%-12d %-15d %-12d%n", exchangeNumber, pirateHealthNow, ninjaHealthNow);

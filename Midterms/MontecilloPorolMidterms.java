@@ -38,8 +38,6 @@ public class MontecilloPorolMidterms {
 
             System.out.println("End of round " + (testCase + 1) + "!");
         }
-        
-        
 
         // Close the scanner to prevent resource leak
         scanner.close();
@@ -91,6 +89,7 @@ public class MontecilloPorolMidterms {
             return power;
         }
 
+        // Getter method to retrieve the type of the combatant
         public String getType() {
             return type;
         }
