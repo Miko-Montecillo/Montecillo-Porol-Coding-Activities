@@ -166,9 +166,9 @@ public class ExcessiveVersion {
         // Static method to show the battle summary for each exchange
         public static void showSummary(CombatResult result) {
             System.out.println("\nBattle Summary:");
-            System.out.println("--------------------------------------------------");
+            System.out.println("-----------------------------------------");
             System.out.println("Exchange #   Pirate Health   Ninja Health");
-            System.out.println("--------------------------------------------------");
+            System.out.println("-----------------------------------------");
 
             List<Integer> pirateHealth = result.getPirateHealth();
             List<Integer> ninjaHealth = result.getNinjaHealth();
@@ -177,10 +177,10 @@ public class ExcessiveVersion {
                 int exchangeNumber = i;
                 int pirateHealthNow = pirateHealth.get(i);
                 int ninjaHealthNow = ninjaHealth.get(i);
-                System.out.printf("%-12d %-15d %-12d%n", exchangeNumber, pirateHealthNow, ninjaHealthNow);
+                System.out.printf("    %-12d  %-15d %-12d%n", exchangeNumber, pirateHealthNow, ninjaHealthNow);
             }
 
-            System.out.println("--------------------------------------------------");
+            System.out.println("-----------------------------------------");
         }
     }
 }
